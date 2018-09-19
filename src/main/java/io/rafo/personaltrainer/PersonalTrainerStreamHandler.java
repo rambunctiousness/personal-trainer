@@ -14,14 +14,15 @@
 package io.rafo.personaltrainer;
 
 import com.amazon.ask.Skill;
-import com.amazon.ask.Skills;
 import com.amazon.ask.SkillStreamHandler;
-import com.amazon.ask.helloworld.handlers.*;
+import com.amazon.ask.Skills;
 import io.rafo.personaltrainer.handlers.*;
 
 public class PersonalTrainerStreamHandler extends SkillStreamHandler {
 
-    private static Skill getSkill() {
+    private static final String SKILL_ID = "amzn1.ask.skill.ead15932-3541-402e-bbe3-e99cd5d1d903";
+
+    static Skill getSkill() {
         return Skills.standard()
                 .addRequestHandlers(
                         new CancelandStopIntentHandler(),
@@ -30,7 +31,7 @@ public class PersonalTrainerStreamHandler extends SkillStreamHandler {
                         new SessionEndedRequestHandler(),
                         new FallbackIntentHandler(),
                         new StartWorkoutIntentHandler())
-                .withSkillId("amzn1.ask.skill.ead15932-3541-402e-bbe3-e99cd5d1d903")
+                .withSkillId(SKILL_ID)
                 .build();
     }
 
