@@ -20,7 +20,7 @@ import io.rafo.personaltrainer.handlers.*;
 
 public class PersonalTrainerStreamHandler extends SkillStreamHandler {
 
-    private static final String SKILL_ID = "amzn1.ask.skill.ead15932-3541-402e-bbe3-e99cd5d1d903";
+    private static final String SKILL_ID = "amzn1.ask.skill.722866a4-b72f-4978-ab81-95b7c2893a8e";
 
     static Skill getSkill() {
         return Skills.standard()
