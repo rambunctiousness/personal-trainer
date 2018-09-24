@@ -32,7 +32,7 @@ public class LaunchRequestHandler implements RequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input) {
         String speechText = "Welcome to Personal Trainer, " +
-                "tell me an exercise you want to add";
+                "tell me how many exercises are in your circuit";
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withSimpleCard("PersonalTrainer", speechText)

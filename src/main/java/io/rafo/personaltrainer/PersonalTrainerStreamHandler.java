@@ -30,7 +30,8 @@ public class PersonalTrainerStreamHandler extends SkillStreamHandler {
                         new LaunchRequestHandler(),
                         new SessionEndedRequestHandler(),
                         new FallbackIntentHandler(),
-                        new StartWorkoutIntentHandler())
+                        new StartWorkoutIntentHandler(),
+                        new SetNumberOfExercisesIntentHandler())
                 .withSkillId(SKILL_ID)
                 .build();
     }

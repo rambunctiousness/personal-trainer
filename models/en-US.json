@@ -32,6 +32,29 @@
             "Start workout",
             "Start a workout"
           ]
+        },
+        {
+          "name": "AddExerciseIntent",
+          "slots": [],
+          "samples": [
+            "Add sit ups"
+          ]
+        },
+        {
+          "name": "SetNumberOfExercisesIntent",
+          "slots": [
+            {
+              "name": "Number",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "There are {Number}",
+            "Set {Number} exercises",
+            "Add {Number} exercises",
+            "There are {Number} exercises",
+            "{Number}"
+          ]
         }
       ],
       "types": []

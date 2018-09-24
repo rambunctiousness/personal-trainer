@@ -17,6 +17,7 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 
+import java.util.Map;
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
@@ -30,8 +31,16 @@ public class StartWorkoutIntentHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Starting your workout";
-       return input.getResponseBuilder()
+        String speechText;
+        Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+        if (sessionAttributes == null || !sessionAttributes.containsKey("NUMBER")) {
+            speechText = "First please tell me how many exercises are in your circuit";
+        } else {
+            String number = sessionAttributes.get("NUMBER").toString();
+            speechText = "Starting your workout with " + number + " exercises";
+        }
+
+        return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withSimpleCard("StartWorkout", speechText)
                 .build();
