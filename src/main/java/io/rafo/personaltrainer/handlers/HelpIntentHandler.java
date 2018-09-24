@@ -30,10 +30,10 @@ public class HelpIntentHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "You can say hello to me!";
+        String speechText = "You can add exercises and start a workout";
         return input.getResponseBuilder()
                 .withSpeech(speechText)
-                .withSimpleCard("HelloWorld", speechText)
+                .withSimpleCard("Help", speechText)
                 .withReprompt(speechText)
                 .build();
     }
