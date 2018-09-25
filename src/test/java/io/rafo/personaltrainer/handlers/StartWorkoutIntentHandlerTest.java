@@ -8,9 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Collections;
 import java.util.Optional;
-import java.util.function.Predicate;
 
-import static com.amazon.ask.request.Predicates.intentName;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -33,7 +31,7 @@ public class StartWorkoutIntentHandlerTest {
         Optional<Response> response = startWorkoutIntentHandler.handle(handlerInput);
         String responseString = response.toString();
 
-        assertTrue(responseString.contains("title: StartWorkout"));
+        assertTrue(responseString.contains("title: PersonalTrainer"));
         assertTrue(responseString.contains("content: Starting your workout with 5 exercises"));
     }
 
@@ -49,7 +47,7 @@ public class StartWorkoutIntentHandlerTest {
         Optional<Response> response = startWorkoutIntentHandler.handle(handlerInput);
         String responseString = response.toString();
 
-        assertTrue(responseString.contains("title: StartWorkout"));
+        assertTrue(responseString.contains("title: PersonalTrainer"));
         assertTrue(responseString.contains("content: First please tell me how many exercises are in your circuit"));
     }
 
