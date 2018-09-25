@@ -42,7 +42,7 @@ public class StartWorkoutIntentHandler implements RequestHandler {
 
         return input.getResponseBuilder()
                 .withSpeech(speechText)
-                .withSimpleCard("StartWorkout", speechText)
+                .withSimpleCard("PersonalTrainer", speechText)
                 .build();
     }
 

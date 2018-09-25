@@ -24,7 +24,7 @@ public class SetNumberOfExercisesIntentHandler implements RequestHandler {
         String speechText = getNumberOfExercisesResponse(input);
         return input.getResponseBuilder()
                 .withSpeech(speechText)
-                .withSimpleCard("SetExercises", speechText)
+                .withSimpleCard("PersonalTrainer", speechText)
                 .build();
     }
 

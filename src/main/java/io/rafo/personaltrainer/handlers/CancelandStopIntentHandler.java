@@ -32,7 +32,7 @@ public class CancelandStopIntentHandler implements RequestHandler {
         String speechText = "Goodbye";
         return input.getResponseBuilder()
                 .withSpeech(speechText)
-                .withSimpleCard("HelloWorld", speechText)
+                .withSimpleCard("PersonalTrainer", speechText)
                 .build();
     }
 }

@@ -19,11 +19,6 @@ public class SetNumberOfExercisesIntentHandlerTest {
     SetNumberOfExercisesIntentHandler setNumberOfExercisesIntentHandler = new SetNumberOfExercisesIntentHandler();
 
     @Test
-    public void testHandle() {
-
-    }
-
-    @Test
     public void testGetNumberOfExercisesZero() {
 
         Slot numberOfExercisesSlot = Slot.builder().withValue("0").build();
@@ -51,7 +46,7 @@ public class SetNumberOfExercisesIntentHandlerTest {
 
         Optional<Response> handle = setNumberOfExercisesIntentHandler.handle(handlerInput);
 
-        assertTrue(handle.toString().contains("title: SetExercises"));
+        assertTrue(handle.toString().contains("title: PersonalTrainer"));
         assertTrue(handle.toString().contains("content: I'm not sure how many exercises you want"));
     }
 

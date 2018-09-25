@@ -33,7 +33,7 @@ public class HelpIntentHandler implements RequestHandler {
         String speechText = "You can add exercises and start a workout";
         return input.getResponseBuilder()
                 .withSpeech(speechText)
-                .withSimpleCard("Help", speechText)
+                .withSimpleCard("PersonalTrainer", speechText)
                 .withReprompt(speechText)
                 .build();
     }
